@@ -57,7 +57,10 @@ html{
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
+    /* margin: var(--header-height) 0 0 0; */
+    margin-top: 150px;
+    margin-left: 30px;
+    margin-right: 30px ;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--second-color);
@@ -88,13 +91,13 @@ img {
     font-size: var(--h2-font-size);
     color: var(--first-color);
     margin-top: var(--mb-2);
-    margin-bottom: var(--mb-4);
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .section-title::after {
     position: absolute;
-    content: "";
+    /* content: ""; */
     width: 64px;
     height: 0.18rem;
     left: 0;
@@ -296,4 +299,58 @@ img {
     margin-bottom: var(--mb-4);
     border-radius: .5rem;
     box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+}
+
+.skills__icon {
+    font-size: 2rem;
+    margin-right: var(--mb-2);
+    color: var(--first-color);
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+}
+
+.skills_bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: var(--z-back);
+}
+
+.skills__html {
+    width: 95%;
+}
+
+.skills__img {
+    border-radius: .5rem;
+}
+
+/* Work */
+.work {
+    text-align: center;
+}
+
+.work__container {
+    row-gap: 2em;
+}
+
+.work__img {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.work__img img {
+    transition: 1s;
+    cursor: pointer;
+}
+
+.work__img img:hover {
+    transform: scale(1.1);
 }
