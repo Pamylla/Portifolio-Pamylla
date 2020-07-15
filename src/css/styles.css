@@ -58,7 +58,7 @@ html{
 
 body {
     /* margin: var(--header-height) 0 0 0; */
-    margin-top: 150px;
+    margin-top: 90px;
     margin-left: 30px;
     margin-right: 30px ;
     font-family: var(--body-font);
@@ -377,4 +377,91 @@ img {
     font-size: 1.5rem;
     color: #fff;
     margin: 0 var(--mb-2);
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+
+    body {
+        margin: 0;
+    }
+
+    .section {
+      padding-top: 4rem;
+      padding-bottom: 3rem;  
+    }
+
+    .section-title {
+        margin-bottom: var(--mb-5);
+    }
+
+    .section-title::after {
+        width: 80px;
+        top: 3rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav__list {
+        display: flex;
+        padding-top: 0;
+    }
+
+    .nav__item {
+        margin-left: var(--mb-5);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__link {
+        color: var(--second-color);
+    }
+
+    .home {
+        height: 100vh;
+        margin-top: 150px;
+    }
+
+    .home__data {
+        align-self: flex-end;
+    }
+
+    .home__social {
+        padding-top: 0;
+        padding-bottom: 2.5rem;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+
+    .home__social-icon {
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
+    }
+
+    .home__img {
+        width: 457px;
+        bottom: 15%;
+    }
+
+    .about__container, .skills__container{
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        text-align: initial;
+    }
+
+    .about__img img {
+        width: 300px;
+    }
+
+    .work__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
 }
